@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 06</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="grid_container">
+
+    <!-- The navigation bar itself -->
+    <div class="navigation_bar">
+        <!-- The 'brand' of a website. Typically the name of the website, and generally links to the home page -->
+        <a href="#" class="navigation_brand">My Music Store</a>
+
+        <!-- The hamburger button that appears on small displays. Opens or closes the app drawer -->
+        <div class="navigation_hamburger">
+            <img src="res/hamburger.png" alt="Hamburger button">
+        </div>
+
+        <!-- List of navigation items -->
+        <ul class="navigation_list">
+            <li><a href="#">Rock</a></li>
+            <li><a href="#">Comedy</a></li>
+            <li><a href="#">Elevator</a></li>
+        </ul>
+    </div>
+
+    <div id="content">Here is some content!</div>
+
+
+<div id="foot">June</div>
+</div>
+<!-- This script allows for revealing and hiding the navigation drawer on small screens when the hamburger
+     button is clicked -->
+<script type="text/javascript">
+    document.querySelector('.navigation_hamburger').addEventListener('click', function () {
+        document.querySelectorAll('.navigation_list').forEach(nav => nav.classList.toggle('navigation_tray_reveal'));
+    });
+</script>
+</body>
+</html>

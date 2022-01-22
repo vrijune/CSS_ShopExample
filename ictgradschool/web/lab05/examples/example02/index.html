@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example 02</title>
+        <style type="text/css">
+            /*
+                This rule will only apply when displaying the page on a screen (not when printing, screen-readers, etc)
+            */
+            @media screen {
+                /* This rule applies to all screens, regardless of size or capabilities */
+                * {
+                    font-family: Calibri, sans-serif;
+                    font-size: 20pt;
+                }
+
+                /* Any viewport that is up to 600px wide */
+                @media (max-width: 600px) {
+                    body {
+                        background: rebeccapurple;
+                        color: yellow;
+                    }
+                }
+
+                /* Any viewport that is between 600px and 800px wide */
+                @media (min-width: 600px) and (max-width: 800px) {
+                    body {
+                        background: orangered;
+                        color: green;
+                    }
+                }
+
+                /* Any viewport that is between 800px and 1024px wide */
+                @media (min-width: 800px) and (max-width: 1024px) {
+                    body {
+                        background: green;
+                        color: blue;
+                    }
+                }
+
+                /* Any viewport that is at least 1024px wide */
+                @media (min-width: 1024px) {
+                    body {
+                        background: goldenrod;
+                        color: cyan;
+                    }
+                }
+
+                /*
+                    In the future we will be able to write these expressions in a cleaner way:
+
+                        @media (width <= 600px) { }
+                        @media print(600px < width <= 800px) { }
+                        @media print(800px < width <= 1024px) { }
+                        @media print(width > 1024px) { }
+
+                    However this is still in the draft specification stage. Firefox supports a limited set of these
+                    but Chrome does not. Avoid these for now, but be aware that a nicer syntax is on the horizon.
+                */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non turpis pulvinar, pharetra lectus id,
+            lobortis elit. Mauris feugiat sapien vel ipsum scelerisque luctus. Aliquam orci ipsum, facilisis et neque
+            nec, condimentum vulputate ligula. Proin porttitor metus nec ultrices semper. Aliquam sagittis justo sit
+            amet ante convallis laoreet vitae sed nunc. Mauris non facilisis neque, in iaculis nulla. Fusce augue ante,
+            viverra et pulvinar sed, elementum sit amet est. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia Curae; In et euismod libero. Donec euismod vehicula lacus non hendrerit. Proin
+            pretium orci eros, eu scelerisque eros lobortis eget. Nulla pretium dignissim lorem non pharetra.
+            Suspendisse a euismod nibh. Aliquam erat volutpat. Quisque congue tellus dapibus massa posuere, eget
+            condimentum quam rutrum. Integer pellentesque ipsum ut malesuada volutpat.</p>
+
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat
+            volutpat. Duis placerat, tellus vel porttitor feugiat, sapien quam gravida ex, vitae sodales mi urna aliquet
+            quam. Vivamus mattis dui vel ultricies congue. Morbi erat orci, aliquam eu pretium eleifend, interdum at
+            mauris. Nulla sed erat non enim eleifend fermentum. Integer id mi a magna accumsan tincidunt. Nam accumsan
+            quam in leo venenatis, cursus varius lacus finibus. Sed feugiat sodales porttitor. Nulla hendrerit, orci sit
+            amet commodo volutpat, mauris velit mattis mi, et congue justo arcu nec sapien. Nulla facilisi. Vestibulum
+            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. Vivamus
+            iaculis non ipsum vel fringilla.</p>
+
+        <p>In varius urna ut dolor laoreet consectetur. Aliquam rhoncus tempor placerat. Cras rutrum non ante ac
+            finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel nulla eros. Suspendisse
+            dignissim pulvinar mauris, vel volutpat nibh molestie at. Suspendisse elementum turpis in elit efficitur,
+            sed scelerisque diam scelerisque. Pellentesque sit amet mollis nunc. Pellentesque est nisi, tincidunt vel
+            laoreet at, iaculis et ipsum. Vivamus blandit commodo congue. In porttitor lectus euismod lacus pharetra
+            mattis. Donec quis justo nec tellus faucibus sollicitudin posuere ac odio.</p>
+
+        <p>Cras lobortis, mi et fermentum sodales, tortor leo elementum ante, a vestibulum purus urna in nunc. Donec
+            viverra bibendum nibh id fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci
+            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse dictum libero
+            quis erat molestie rhoncus. Sed tortor leo, mattis et porttitor nec, faucibus ac neque. Sed in cursus leo.
+            Morbi tempor gravida elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+            turpis egestas. Ut vel hendrerit nisl, eu eleifend nisi. Suspendisse vitae dignissim lorem, ac sollicitudin
+            lacus. Aenean sit amet felis sit amet urna auctor placerat maximus eu lacus. Nulla condimentum vehicula
+            lacinia. Mauris facilisis magna ipsum. Nulla id risus vehicula, consectetur lectus laoreet, pellentesque
+            tortor.</p>
+    </body>
+</html>

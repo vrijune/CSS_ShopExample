@@ -1,0 +1,48 @@
+.cursive {
+    font-family: 'Alex Brush', Georgia, serif;
+    font-size: 22pt;
+    line-height: 1.5em;
+    color: purple;
+    margin: auto;
+    width: 50%;
+}
+
+    @media only screen and (max-width: 700px){
+        .cursive{
+
+    padding: 50px 30px;}
+}
+
+
+    @media only screen and (min-width: 1500px) {
+        body{
+            background: url('assets/corner-LT-pattern.png') no-repeat 10px 10px,
+            url('assets/corner-RB-pattern.png') no-repeat calc(100% - 10px) calc(100% - 10px) Lavender;
+            padding: 3% 0;
+            box-sizing: border-box;
+        }
+}
+
+#box {
+    /*background: url('assets/ytile-pattern.png') repeat-y 12% top white;*/
+    margin: auto;
+    width: 60%;
+    box-sizing: border-box;
+    min-width: 700px;
+}
+
+
+@media only screen and (max-width:700px){#box{
+    background: url('assets/ytile-pattern.png') repeat-y 12% top white;
+}
+}
+
+@media only screen and (max-width:700px) {
+
+    .border-effect {
+
+        border-radius: 15px 70px;
+
+        box-shadow: 10px 10px 5px #aa99aa;
+    }
+}

@@ -1,0 +1,116 @@
+:root {
+    /*
+        'Custom Properties' are the CSS equivalent of variables. You can define name/value pairs here,
+        then retrieve the values using the CSS function var(). See below for usages of these colors
+    */
+    --nav-col-bg: purple;
+    --nav-col-fg: #FFFFFF;
+}
+
+.grid_container {
+    /* Give a default layout, and set up the grid container for grid */
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas:
+            "header header header"
+            ". content ."
+            "foot foot foot";
+}
+
+
+.navigation_bar {
+    /* Place the navigation bar in the grid */
+    grid-area: header;
+
+    /* Flexbox config to align vertically and withe the brand/nav on either end of the navbar */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1em;
+    font-family: sans-serif;
+    background: var(--nav-col-bg);
+    color: var(--nav-col-fg);
+}
+
+/* Bump up the size of the 'brand' item in the navbar */
+.navigation_brand {
+    font-size: xx-large;
+}
+
+/* Hide the bullet icons from the list of links, and display them horizontally */
+.navigation_list {
+    display: flex;
+    list-style: none;
+    overflow: hidden;
+}
+
+/* Space out nav items */
+.navigation_list > li {
+    margin-right: 2em;
+}
+
+/* Hide usual anchor styling on nav items */
+.navigation_bar a {
+    color: var(--nav-col-fg);
+    text-decoration: none;
+}
+
+/* Set the size of the hamburger button in the bar */
+.navigation_hamburger {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.navigation_hamburger > img {
+    width: 100%;
+}
+
+/* On larger screens, we should not see the hamburger button*/
+.navigation_hamburger {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navigation_bar, .navigation_list {
+        flex-direction: column;
+    }
+
+    /* Hide the list of links initially */
+    .navigation_list {
+        display: none;
+    }
+
+    /* When applied, reveal the list of links */
+    .navigation_tray_reveal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* On small screens, reveal the hamburger button and place it at the end of the navbar */
+    .navigation_hamburger {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+}
+
+#content {
+    background: goldenrod;
+    grid-area: content;
+}
+
+#foot{
+    background-color: purple;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    grid-area:foot;
+    padding-top: 25px;
+}

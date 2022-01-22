@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example 03</title>
+        <style type="text/css">
+            /*
+                Definition for the grid container. Elements to be laid out in the grid will be placed in the matching
+                element, and will then be laid out left-to-right, top-to-bottom
+            */
+            .grid_container {
+                /* This indicates that we are laying this and child elements out as a grid */
+                display: grid;
+
+                /* We tell the grid here to occupy half the outer container (body) width */
+                width: 50%;
+
+                /*
+                    Measurements here are *fractions* of the total grid width/height. This lets us keep the same
+                    grid proportions if we want to change the width/height of the grid
+                */
+                grid-template-columns: 2fr 1fr 2fr;
+                grid-template-rows: 1fr 2fr 3fr;
+            }
+
+
+            /* Each of the cell divs are colored to differentiate them */
+            #A { background: red; }
+            #B { background: green; }
+            #C { background: blue; }
+            #D { background: mediumvioletred; }
+            #E { background: mediumspringgreen; }
+            #F { background: mediumslateblue; }
+            #G { background: lightpink; }
+            #H { background: lightgreen; }
+            #I { background: lightblue; }
+
+
+            /* Use of the :not pseudo-class to match the before/after divs but not the grid container */
+            body > div:not(.grid_container) {
+                background: palegoldenrod;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- Elements outside the grid container are not affected by the layout -->
+        <div >Before grid</div>
+
+
+        <!-- The grid container div bounds where the grid layout rules will apply -->
+        <div class="grid_container">
+            <!-- Elements inside the container are laid out left-to-right, top-to-bottom -->
+
+            <!-- These 3 divs will be on the first row -->
+            <div id="A">a</div>
+            <div id="B">b</div>
+            <div id="C">c</div>
+
+            <!-- ... second row -->
+            <div id="D">d</div>
+            <div id="E">e</div>
+            <div id="F">f</div>
+
+            <!-- ... third row -->
+            <div id="G">g</div>
+            <div id="H">h</div>
+            <div id="I">i</div>
+        </div>
+
+        <!-- Elements outside the grid container are not affected by the layout -->
+        <div>After grid</div>
+    </body>
+</html>

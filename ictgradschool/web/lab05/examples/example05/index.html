@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example 05</title>
+        <style type="text/css">
+
+            @media screen {
+                /* Give a default layout for large screens, and set up the grid container for grid */
+                .grid_container {
+                    display: grid;
+                    width: 100%;
+
+                    grid-template-columns: 1fr 4fr 1fr;
+                    grid-template-rows: 1fr 2fr 8fr 1fr;
+                    grid-template-areas:
+                            "header header header"
+                            "lsidebar content rsidebar"
+                            ". content ."
+                            "foot foot foot";
+
+                }
+
+                /* In later media queries, redefine parts of the grid to change the layout for different devices */
+
+                /* Any viewport that is up to 600px wide */
+                @media (max-width: 600px) {
+                    /* Make grid more suited to a cellphone layout */
+                    .grid_container {
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr 8fr 2fr 1fr;
+                        grid-template-areas:
+                                "header header"
+                                "content content"
+                                "lsidebar rsidebar"
+                                "foot foot";
+                    }
+                }
+
+                /* Any viewport that is between 600px and 800px wide */
+                @media (min-width: 600px) and (max-width: 800px) {
+                    /* Redefine the grid to be more space efficient, removing dead area */
+                    .grid_container {
+                        grid-template-columns: 1fr 4fr 1fr;
+                        grid-template-rows: 1fr 1fr 1fr;
+                        grid-template-areas:
+                                "header header header"
+                                "lsidebar content rsidebar"
+                                "foot foot foot";
+                    }
+                }
+            }
+
+
+            /* None of the area-specific divs need to change based on screen size, the grid definition takes care of this */
+            #navigation {
+                background: aqua;
+                grid-area: header;
+            }
+
+            #bottom-screen {
+                background: orangered;
+                grid-area: foot;
+            }
+
+            #content {
+                background: goldenrod;
+                grid-area: content;
+            }
+
+            #left-side {
+                background: seashell;
+                grid-area: lsidebar;
+            }
+
+            #right-side {
+                background: lavender;
+                grid-area: rsidebar;
+            }
+
+            .grid_container > div {
+                border: 1px solid lightslategray;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="grid_container">
+            <div id="right-side">Annoying ads!</div>
+            <div id="left-side">Free iphones, click here</div>
+            <div id="content">Arguably an article</div>
+            <div id="bottom-screen">A footer</div>
+            <div id="navigation">Look, navigation!</div>
+        </div>
+    </body>
+</html>

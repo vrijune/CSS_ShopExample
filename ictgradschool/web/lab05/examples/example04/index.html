@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example 04</title>
+        <style type="text/css">
+            /*
+                Definition for the grid container.
+            */
+            .grid_container {
+                /* This indicates that we are laying this and child elements out as a grid */
+                display: grid;
+
+                /* We tell the grid here to occupy the full width of the outer container (body) */
+                width: 100%;
+
+                /*
+                    Measurements here are *fractions* of the total grid width/height. This lets us keep the same
+                    grid proportions if we want to change the width/height of the grid
+                */
+                grid-template-columns: 1fr 4fr 1fr;
+                grid-template-rows: 1fr 2fr 8fr 1fr;
+
+                /*
+                    Here we name the areas in the grid. The grid defined above is 3x4, so we need to provide 4 lines,
+                    each representing a row in the grid, with 3 'names' (cells) in each row. Areas are defined by the same
+                    name being used in multiple cells. Areas must be contiguous (no gaps) and be rectangular. That is to say
+
+                        "c c c a a"
+                        "c c c a a"
+                        "b b b a a"
+
+                    is fine, but a layout like
+
+                        "c c c a a"
+                        "c c b a a"
+                        "b b b a a"
+
+                    is not due to the shapes of the c & b areas. If there is a cell that should not be a part of an area
+                    the period (.) can be used to ignore that cell.
+
+                    These definitions can be laid out on multiple lines, or combined onto a single line depending on
+                    preference, but each row must be in its own set of double-quotes.
+
+                        grid-template-areas:
+                            "c c a a"
+                            "c c a a";
+
+                        is equivalent to
+
+                        grid-template-areas: "c c a a" "c c a a";
+
+                    With the areas defined here, we have a full width header and footer on the top and bottom rows of
+                    the grid respectively, a central content block that occupies the central column across rows 2 & 3,
+                    flanked by a left and right sidebar on row 2. The sides of row 3 are empty.
+                */
+                grid-template-areas:
+                        "header header header"
+                        "lsidebar content rsidebar"
+                        ". content ."
+                        "foot foot foot";
+            }
+
+
+            /* Each of the cell divs are colored to differentiate them */
+            #navigation {
+                background: aqua;
+
+                /* Here we specify which area this div should occupy */
+                grid-area: header;
+            }
+
+            #bottom-screen {
+                background: orangered;
+                grid-area: foot;
+            }
+
+            #content {
+                background: goldenrod;
+                grid-area: content;
+            }
+
+            #left-side {
+                background: seashell;
+                grid-area: lsidebar;
+            }
+
+            #right-side {
+                background: lavender;
+                grid-area: rsidebar;
+            }
+
+            .grid_container > div {
+                border: 1px solid lightslategray;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- The grid container div bounds where the grid layout rules will apply -->
+        <div class="grid_container">
+            <!-- Order of elements does not depend on where they are declared, it is determined by their grid area -->
+
+            <div id="right-side">Annoying ads!</div>
+            <div id="left-side">Free iphones, click here</div>
+
+            <!-- The center portion of our document -->
+            <div id="content">Arguably an article</div>
+
+            <!-- This will be at the bottom-->
+            <div id="bottom-screen">A footer</div>
+
+            <!-- This div will be at the top of the grid-->
+            <div id="navigation">Look, navigation!</div>
+        </div>
+    </body>
+</html>
