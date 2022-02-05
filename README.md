@@ -8,7 +8,6 @@ These exercises make use of CSS Grid and CSS Flexbox, which are modern CSS solut
 
 Firefox is the preferred browser for developing Grid/Flex based layouts due to its developer tools support for these layouts. Take a look over the Mozilla [introduction to grid layout](https://mozilladevelopers.github.io/playground/css-grid/) tutorial for some grid examples, and a showcase of the Firefox tools specific to these features. 
 
-
 Exercise One
 ------------
 
