@@ -1,6 +1,5 @@
 Web Lab 05 &ndash; Responsive Design
 ==========
-
 Note
 ----
 
