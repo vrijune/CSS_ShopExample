@@ -3,7 +3,6 @@ Web Lab 05 &ndash; Responsive Design
 
 Note
 ----
-
 These exercises make use of CSS Grid and CSS Flexbox, which are modern CSS solutions to complex (and simple) layout problems. Historically solutions to these problems would be solved using ```float``` or a library such as Bootstrap so many solutions you find online will revolve around these. Avoid the temptation to use these 'found online' solutions at least for this lab.
 
 
