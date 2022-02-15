@@ -6,6 +6,7 @@ Note
 
 These exercises make use of CSS Grid and CSS Flexbox, which are modern CSS solutions to complex (and simple) layout problems. Historically solutions to these problems would be solved using ```float``` or a library such as Bootstrap so many solutions you find online will revolve around these. Avoid the temptation to use these 'found online' solutions at least for this lab.
 
+
 Firefox is the preferred browser for developing Grid/Flex based layouts due to its developer tools support for these layouts. Take a look over the Mozilla [introduction to grid layout](https://mozilladevelopers.github.io/playground/css-grid/) tutorial for some grid examples, and a showcase of the Firefox tools specific to these features. 
 
 Exercise One
