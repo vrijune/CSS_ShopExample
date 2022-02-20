@@ -1,4 +1,4 @@
-Web Lab 05 &ndash; Responsive Design
+Web 05 &ndash; Responsive Design
 ==========
 
 Note
