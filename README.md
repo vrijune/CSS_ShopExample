@@ -3,7 +3,7 @@ Web 05 &ndash; Responsive Design
 
 
 ----
-These exercises make use of CSS Grid and CSS Flexbox, which are modern CSS solutions to complex (and simple) layout problems. Historically solutions to these problems would be solved using ```float``` or a library such as Bootstrap so many solutions you find online will revolve around these. Avoid the temptation to use these 'found online' solutions at least for this lab.
+Make the use of CSS Grid and CSS Flexbox, which are modern CSS solutions to complex (and simple) layout problems. Historically solutions to these problems would be solved using ```float``` or a library such as Bootstrap so many solutions you find online will revolve around these. Avoid the temptation to use these 'found online' solutions at least for this lab.
 
 
 Firefox is the preferred browser for developing Grid/Flex based layouts due to its developer tools support for these layouts. Take a look over the Mozilla [introduction to grid layout](https://mozilladevelopers.github.io/playground/css-grid/) tutorial for some grid examples, and a showcase of the Firefox tools specific to these features. 
@@ -83,8 +83,6 @@ At this stage your page should look similar to this:
 
 Exercise Five
 --------
-
-Make a copy of your ```ex04``` directory, naming your copy ```ex05```. Close all open editor tabs and reopen them from the ```ex05``` directory.
 
 Break up the content pane into 4 rows stacked vertically. Each of these rows should be sized based on the height of the contents contained within, and should be colored clearly so they can be easily seen. Within each of these rows, add a larger header that contains a title for each section - the first should be called ```Introduction```, while each of the others should be named after your chosen genres. Update the navigation bar so that when a navigation item is clicked, the page scrolls to the relevant section of the page.
 
