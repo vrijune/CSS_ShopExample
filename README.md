@@ -1,4 +1,4 @@
-Web 05 &ndash; Responsive Design
+Web Exercise 05 &ndash; Responsive Design
 ==========
 
 
